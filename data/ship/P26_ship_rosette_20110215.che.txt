@@ -1,0 +1,223 @@
+*2013/08/14 12:03:33.95
+*IOS HEADER VERSION 1.10 2011/10/26 2011/10/26
+
+*FILE
+    START TIME          : UTC 2011/02/15 23:33:24.000
+    TIME INCREMENT      : 0 0 0 0.416667E-01 0  ! (day hr min sec ms)
+    NUMBER OF RECORDS   : 24
+    DATA DESCRIPTION    : Bottle:Rosette:Up:Stop + CTD:Up
+    FILE TYPE           : ASCII
+    CRC                 : 93590341
+    NUMBER OF CHANNELS  : 21
+
+    $TABLE: CHANNELS
+    ! No Name                               Units           Minimum        Maximum
+    !--- ---------------------------------- --------------- -------------- --------------
+       1 Sample_Number                      n/a             387            410
+       2 Bottle_Number                      n/a             1              24
+       3 Bottle:Firing_Sequence             n/a             1              24
+       4 Pressure:CTD                       dbar            4.7            4308.8
+       5 Temperature:CTD                    deg_C_(ITS90)   1.4942         5.6489
+       6 Salinity:Practical:CTD             PSS-78          32.6572        34.6829
+       7 Sigma-t:CTD                        kg/m^3          25.7713        27.7804
+       8 Transmissivity:CTD                 %/m             58.1           64.7
+       9 Oxygen:Dissolved:CTD:Volume        ml/l            0.4            6.99
+      10 Oxygen:Dissolved:CTD:Mass          µmol/kg         17.2           304.4
+      11 Fluorescence:CTD:Seapoint          mg/m^3          0              1.719
+      12 Salinity:Bottle                    PSS-78          32.6562        34.682
+      13 Flag:Salinity:Bottle               n/a
+      14 Oxygen:Dissolved:Bottle:Volume     ml/l            0.363          6.989
+      15 Flag:Oxygen:Dissolved:Bottle       n/a
+      16 Nitrate_plus_Nitrite:Bottle        µmol/l          13.8           45.3
+      17 Flag:Nitrate_plus_Nitrite:Bottle   n/a
+      18 Phosphate:Bottle                   µmol/l          1.3            3.28
+      19 Flag:Phosphate:Bottle              n/a
+      20 Silicate:Bottle                    µmol/l          19.4           172.4
+      21 Flag:Silicate:Bottle               n/a
+    $END
+
+    $TABLE: CHANNEL DETAIL
+    ! No  Pad   Start  Width  Format  Type  Decimal_Places
+    !---  ----  -----  -----  ------  ----  --------------
+       1  -99   ' '        5  I       I     ' '
+       2  -99   ' '        3  I       I       0
+       3  -99   ' '        3  I       I       0
+       4  -99   ' '        7  F       ' '     1
+       5  -99   ' '        9  F       ' '     4
+       6  -99   ' '        9  F       ' '     4
+       7  -99   ' '        9  F       R4      4
+       8  -99   ' '        6  F       ' '     1
+       9  -99   ' '        7  F       ' '     2
+      10  -99   ' '        6  F       ' '     1
+      11  -99   ' '        8  F       ' '     3
+      12  -99   ' '        9  F       R4      4
+      13  0     ' '        3  NQ      C     ' '
+      14  -99   ' '        8  F       R4      3
+      15  0     ' '        3  NQ      C     ' '
+      16  -99   ' '        6  F       R4      1
+      17  0     ' '        3  NQ      C     ' '
+      18  -99   ' '        7  F       R4      2
+      19  0     ' '        3  NQ      C     ' '
+      20  -99   ' '        6  F       R4      1
+      21  0     ' '        3  NQ      C     ' '
+    $END
+
+*ADMINISTRATION
+    MISSION             : 2011-01
+    AGENCY              : IOS, Ocean Sciences Division, Sidney, B.C.
+    COUNTRY             : Canada
+    PROJECT             : Line P
+    SCIENTIST           : Robert M.
+    PLATFORM            : John P. Tully
+
+*LOCATION
+    GEOGRAPHIC AREA     : North-East Pacific
+    STATION             : P26
+    EVENT NUMBER        : 58
+    LATITUDE            :  49  59.77000 N  ! (deg min)
+    LONGITUDE           : 144  59.79000 W  ! (deg min)
+    WATER DEPTH         : 4252
+
+*INSTRUMENT
+    TYPE                : Sea-Bird CTD
+    MODEL               : SBE-911plus
+    SERIAL NUMBER       : 0506
+    LOCATION            : Mid-ship                              ! custom item
+
+*COMMENTS
+    Samples Number 387 to 410: Nutrients:Bottle - rerun.
+    Samples Number 388 and 400: Nutrients:Bottle - loose cap.
+    Sample Number 396: All - spigot drip; Oxygen:Dissolved:Bottle - value looks 
+	ok in comparison to Oxygen:Dissolved:CTD sensor.
+    Sample Number 406: Salinity:Bottle - 3 readings; second reading too high;
+	looks ok in COMPARE.
+
+    Analysis methods:
+    -----------------
+
+	Chlorophyll samples were filtered onto 25mm GF/F filters and stored
+	in glass scintillation vials at -20C prior to analysis. Samples were
+	extracted in 90% acetone at -20C for 24 hours and analyzed
+	on a Turner 10AU fluorometer which is calibrated annually with
+	commercially pure chlorophyll a (Sigma).
+	Fluorescence readings taken before and after acidification were used to
+	calculate chlorophyll and phaeopigment concentrations (Holm-Hansen et al 1965).
+	Chlorophyll samples were analyzed at sea and at IOS.
+	When duplicate samples were collected the average of two samples is reported. 
+	Variability is assessed as the CV% (std dev / mean*100).
+	For details see file 2011-01_CHL.pdf.
+	Phaeopigment data are provided for information only and no quality flags are
+	assigned to them.
+
+	Oxygen samples were analyzed at sea on an automated Winkler titration system
+	(Brinkmann Dosimat model 765 and a PC950 Colorimeter controlled by
+	AutoOxy software V3.4) with modifications based on Carpenter (1965)
+	and adhering to WOCE protocols (Culberson 1991).
+	A shift in the Oxygen:Dissolved:Bottle standardization parameters occurred between 
+	events 0032 and 0044; this was not investigated to determine if the resultant 
+	change in Thiosulfate normality was real, or the result of a shift in lab 
+	temperature.  Checks of the fit of Oxygen:Dissolved:CTD against titrated 
+	Oxygen:Dissolved:Bottle suggest that the titrated values from the first part of 
+	the cruise are lower than those of the latter part by about 0.02 ml/l.
+	For details of duplicate analysis see file 2011-01_OXY.pdf.
+
+	Salinity samples were collected in glass bottles and analyzed at IOS on 
+	Guildline Autosal model 8400B, S/N 68572. Salinometers are standardized
+	with IAPSO standard seawater. For details on duplicate samples see file
+	2011-01_SAL.pdf.
+
+	Nutrient samples were collected in plastic tubes and most samples were stored
+	frozen and later analyzed at IOS. Deep Silicate samples (400 dbar and deeper)
+	were analysed cool at IOS. An Astoria analyzer was used following methods
+	described in Barwell-Clarke and Whitney (1996).
+	See file 2011-01_NUT.pdf for duplicates and precision information.
+	NOTE: July 2013: A correction has been applied to Nitrate_plus_Nitrite:Bottle and 
+	Phosphate:Bottle data from deep-water cruises analyzed at IOS between 2009 and 2012. 
+	For details see the report: Corrections_to_Nitrate_and_Phosphate_Data_2009-2012.pdf.
+
+	The minimum detectable level for DMS is 0.10 nM, so “0” values should be
+	interpreted as <0.10. For details on the collection and analysis of the
+	DMS data see file 2011-01_DMS_Report.pdf.  See file 2011-01_DMS.pdf 
+	for duplicates analysis.
+
+	References:
+	1. Holm-Hansen, O., Lorenzen, C.J., Holmes, R.W., and Strickland J.D.H. 1965.
+	Fluorometric Determination of Chlorophyll. J.du Cons. Intl. Pour l’Epl.
+	De la Mer. 30:3-15.
+	2. Carpenter, J.H. 1965. The Chesapeake Bay Institute Technique for the
+	Winkler Dissolved Oxygen Method. Limmnol. & Oceanogr., 10: 141-143.
+	3. Culberson, C.H. 1991. Dissolved oxygen. WOCE Hydrographic
+	Programme Operations and Methods (July 1991). 15pp.
+	4. Barwell-Clarke, J. and Whitney, F. 1996. Institute of Ocean Sciences
+	Nutrient Methods and Analysis. Canadian Technical Report of Hydrography
+	and Ocean Sciences, No. 182, 43 pp.
+
+    ---------------------------------------------------------------------------
+    Transmissivity, PAR and Fluorescence data are nominal and unedited.
+
+    For details on how the transmissivity calibration parameters were calculated
+	see the document Transmissivity_Calculation.pdf.
+
+    The Oxygen:Dissolved:CTD calibration was done using the method described in 
+	the Sea-Bird Application Note #64-2 (Sea-Bird_64-2_Feb2010.pdf).
+
+    The Oxygen:Dissolved:CTD channel was corrupted for all or parts of
+	events 0007, 0010, 0015, 0017, 0018, 0019 and 0021.
+
+    For details on the processing see processing report: 2011-01-proc.pdf
+
+    NOTE: July 2013: A correction has been applied to Nitrate_plus_Nitrite:Bottle and 
+	Phosphate:Bottle data from deep-water cruises analyzed at IOS between 2009 and 2012. 
+	For details see the report: Corrections_to_Nitrate_and_Phosphate_Data_2009-2012.pdf.
+
+    $REMARKS
+	Data quality is expressed with the following flags
+	----------------------------------------------------------------------------
+	1 = Sample for this measurement was drawn from water bottle but not analyzed
+	    (not normally used).
+	2 = Acceptable measurement (not normally used).
+	3 = Questionable measurement (no problem observed in sampling or analysis,
+     	    but value is not trusted, nonetheless; includes outlyers).
+	4 = Bad measurement (known problem with sampling or analysis, but not
+	    serious enough to completely discard the value).
+	5 = Not reported (lost sample; unredeemably bad measurement).
+	6 = Mean of replicate measurements.
+	7 = Manual chromatographic peak measurement.
+	8 = Irregular digital chromatographic peak integration.
+	9 = Sample not drawn for this measurement from this bottle (not normally
+	    used).
+	----------------------------------------------------------------------------
+    $END
+
+!-1-- 2- 3- --4--- ---5---- ---6---- ---7---- --8-- --9--- --10- ---11-- ---12--- 13 ---14-- 15 --16- 17 --18-- 19 --20- 21
+!Samp Bo Bo Pressu Temperat Salinity Sigma-t: Trans Oxygen Oxyge Fluores Salinity Fl Oxygen: Fl Nitra Fl Phosph Fl Silic Fl
+!le_  tt tt re:CTD ure:CTD  :        CTD      missi :Disso n:Dis cence:  :Bottle  ag Dissolv ag te_pl ag ate:   ag ate:  ag
+!Numb ~u ~u                 Practica          vity: lved:  solve CTD:             ~o ed:     ~o ~Nitr ~o Bottle ~o Bottl ~o
+!er   mb en                 l:CTD             CTD   CTD:   d:CTD Seapoin          tt Bottle: tt ite:B tt        tt e     tt
+!     er ce                                         Volume :Mass t                le Volume  le ottle le        le       le
+!---- -- -- ------ -------- -------- -------- ----- ------ ----- ------- -------- -- ------- -- ----- -- ------ -- ----- --
+*END OF HEADER
+  410 24 24    4.7   5.6355  32.6572  25.7713  58.1   6.99 304.4   1.709  32.6564      6.988     13.8      1.30     19.4
+  409 23 23    9.6   5.6376  32.6576  25.7714  58.2   6.99 304.3   1.719  32.6562      6.989     13.9      1.31     19.4
+  408 22 22   23.9   5.6431  32.6584  25.7714  58.3   6.99 304.0   1.689  32.6578      6.980     14.0      1.31     19.5
+  407 21 21   49.2   5.6431  32.6607  25.7732  58.4   6.98 303.6   1.692  32.6588      6.983     14.0      1.31     19.5
+  406 20 20   75.0   5.6489  32.6635  25.7747  58.5   6.95 302.7   1.646  32.6639 3    6.975 6   14.2      1.32     19.7
+  405 19 19   98.9   5.5980  32.8758  25.9486  61.7   6.18 269.0   0.554  32.7896      6.518     16.5      1.45     23.6
+  404 18 18  124.2   4.9538  33.5321  26.5425  63.6   4.14 180.1   0.044  33.5302      4.158     29.5 6    2.20 6   47.8 6
+  403 17 17  149.8   4.5246  33.7201  26.7389  63.7   3.09 134.3   0.026  33.7209      3.118     34.7      2.52     60.7
+  402 16 16  175.7   4.2750  33.7886  26.8199  63.8   2.31 100.5   0.023  33.7877      2.317     38.0      2.75     70.0
+  401 15 15  200.4   4.1726  33.8276  26.8616  63.9   1.90  82.5   0.021  33.8235      1.907     39.9      2.87     75.6
+  400 14 14  249.0   4.0936  33.8905  26.9197  64.2   1.34  58.2   0.021  33.8874      1.334     41.9      3.00     83.3
+  399 13 13  301.0   3.9721  33.9430  26.9739  64.4   1.17  50.9   0.046  33.9432      1.150     42.6      3.04     90.9
+  398 12 12  401.2   3.8554  34.0681  27.0853  64.4   0.80  34.8   0.024  34.0646      0.780     43.4      3.13    103.9
+  397 11 11  601.6   3.4523  34.2327  27.2561  64.5   0.47  20.4   0.024  34.2303      0.440     45.0      3.23    124.7
+  396 10 10  801.4   3.1389  34.3159  27.3520  64.5   0.44  19.0   0.024  34.3142      0.404     45.1 6    3.28 6  136.4 6
+  395  9  9 1000.4   2.8408  34.3915  27.4394  64.6   0.40  17.2   0.026  34.3938      0.363 6   45.0      3.26    147.5
+  394  8  8 1250.2   2.5485  34.4558  27.5163  64.6   0.43  18.8   0.029  34.4537      0.395     45.3      3.28    157.7
+  393  7  7 1500.6   2.2826  34.5112  27.5830  64.6   0.67  29.0   0.026  34.5089      0.622     45.0      3.22    164.5
+  392  6  6 2000.0   1.8968  34.5912  27.6780  64.6   1.38  60.1   0.024  34.5948      1.360     43.0      3.08    172.0
+  391  5  5 2499.6   1.6811  34.6333  27.7282  64.7   2.04  88.8   0.027  34.6312      2.039     41.0 6    2.93 6  172.4 6
+  390  4  4 3000.4   1.5518  34.6590  27.7584  64.6   2.60 112.8   0.000  34.6574      2.594     39.4      2.82    170.0
+  389  3  3 3499.9   1.4942  34.6739  27.7746  64.7   2.97 129.2   0.000  34.6736      2.972     38.6      2.75    167.8
+  388  2  2 4000.3   1.4954  34.6812  27.7804  64.6   3.16 137.3   0.000  34.6815 6    3.167 6   37.3      2.65    169.1
+  387  1  1 4308.8   1.5203  34.6829  27.7799  64.3   3.19 138.4   0.000  34.6820      3.247     37.8      2.69    171.6
