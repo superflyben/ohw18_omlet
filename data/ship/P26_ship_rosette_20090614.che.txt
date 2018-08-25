@@ -1,0 +1,201 @@
+*2013/10/10 13:43:27.22
+*IOS HEADER VERSION 1.10 2011/10/26 2011/10/26
+
+*FILE
+    START TIME          : UTC 2009/06/14 12:19:37.000
+    TIME INCREMENT      : 0 0 0 0.416667E-01 0  ! (day hr min sec ms)
+    NUMBER OF RECORDS   : 24
+    DATA DESCRIPTION    : Bottle:Rosette:Up:Stop + CTD:Up
+    FILE TYPE           : ASCII
+    CRC                 : C6191A4
+    NUMBER OF CHANNELS  : 20
+
+    $TABLE: CHANNELS
+    ! No Name                               Units           Minimum        Maximum
+    !--- ---------------------------------- --------------- -------------- --------------
+       1 Sample_Number                      n/a             434            457
+       2 Bottle_Number                      n/a             1              24
+       3 Pressure:CTD                       dbar            5.5            4320.2
+       4 Temperature:CTD                    deg_C_(ITS90)   1.5055         9.5617
+       5 Salinity:Practical:CTD             PSS-78          32.5521        34.6838
+       6 Sigma-t:CTD                        kg/m^3          25.1388        27.7811
+       7 Transmissivity:CTD                 %/m             52.5           62.7
+       8 Oxygen:Dissolved:CTD:Volume        ml/l            0.33           7.28
+       9 Oxygen:Dissolved:CTD:Mass          µmol/kg         14.5           316.7
+      10 Fluorescence:CTD:Seapoint          mg/m^3          0.115          1.148
+      11 Salinity:Bottle                    PSS-78          32.5525        34.6853
+      12 Flag:Salinity:Bottle               n/a
+      13 Oxygen:Dissolved:Bottle:Volume     ml/l            0.346          7.311
+      14 Flag:Oxygen:Dissolved:Bottle       n/a
+      15 Nitrate_plus_Nitrite:Bottle        µmol/l          9.9            46.9
+      16 Flag:Nitrate_plus_Nitrite:Bottle   n/a
+      17 Phosphate:Bottle                   µmol/l          1.08           3.31
+      18 Flag:Phosphate:Bottle              n/a
+      19 Silicate:Bottle                    µmol/l          16.2           180.8
+      20 Flag:Silicate:Bottle               n/a
+    $END
+
+    $TABLE: CHANNEL DETAIL
+    ! No  Pad   Start  Width  Format  Type  Decimal_Places
+    !---  ----  -----  -----  ------  ----  --------------
+       1  -99   ' '        5  I       I       0
+       2  -99   ' '        3  I       I       0
+       3  -99   ' '        7  F       ' '     1
+       4  -99   ' '        9  F       ' '     4
+       5  -99   ' '        9  F       ' '     4
+       6  -99   ' '        9  F       R4      4
+       7  -99   ' '        6  F       ' '     1
+       8  -99   ' '        7  F       ' '     2
+       9  -99   ' '        6  F       ' '     1
+      10  -99   ' '        8  F       ' '     3
+      11  -99   ' '        9  F       R4      4
+      12  0     ' '        3  NQ      C     ' '
+      13  -99   ' '        8  F       R4      3
+      14  0     ' '        3  NQ      C     ' '
+      15  -99   ' '        6  F       R4      1
+      16  0     ' '        3  NQ      C     ' '
+      17  -99   ' '        7  F       R4      2
+      18  0     ' '        3  NQ      C     ' '
+      19  -99   ' '        6  F       R4      1
+      20  0     ' '        3  NQ      C     ' '
+    $END
+
+*ADMINISTRATION
+    MISSION             : 2009-09
+    AGENCY              : IOS, Ocean Sciences Division, Sidney, B.C.
+    COUNTRY             : Canada
+    PROJECT             : Line P
+    SCIENTIST           : Robert M.
+    PLATFORM            : John P. Tully
+
+*LOCATION
+    GEOGRAPHIC AREA     : North-East Pacific
+    STATION             : P26
+    EVENT NUMBER        : 71
+    LATITUDE            :  50   0.10000 N  ! (deg min)
+    LONGITUDE           : 144  59.94000 W  ! (deg min)
+    WATER DEPTH         : 4251
+
+*INSTRUMENT
+    TYPE                : Sea-Bird CTD
+    MODEL               : SBE-911plus
+    SERIAL NUMBER       : 0443
+
+*COMMENTS
+    Sample Number 435: Nutrients:Bottle - tube cracked and leaking, transferred to new tube.
+    Sample Number 449: Nutrients:Bottle - top of tube broken off.
+    Sample Number 452: Nutrients:Bottle - tube cracked, transferred to new tube.
+
+    Analysis methods:
+    -----------------
+	Chlorophyll samples were analyzed at sea using a Chemistry Turner Designs
+	10AU fluorometer which was calibrated on May 12, 2009 using pure chlorophyll a.
+	Chlorophyll precision was determined by analyzing replicate samples drawn
+	from one Bottle. For details see file 2009-09_CHL.pdf.
+
+	Oxygen samples were analyzed at sea using an automated titration system
+	consisting of a Brinkman Dosimat (model 665) and a PC 950 Colorimeter.
+	For information on precision see file 2009-09_OXY.pdf.
+
+	Salinity samples were collected in glass bottles and analyzed at IOS on a
+	Guildline model 8400B Autosal standardized with IAPSO standard seawater.
+	Samples from some casts were analyzed at sea on a Guildline Portasal; there
+	are comments attached to those samples and all were flagged "4".
+	See file 2009-09_SAL.pdf for information on Autosal precision.
+
+	Nutrient samples were collected in plastic tubes and analyzed fresh at sea
+	using an Astoria autoanalyzer following methods described in
+	Barwell-Clarke and Whitney (1996). For details on nutrient duplicates and
+	precision see file 2009-09_NUT.pdf.
+	NOTE: July 2013: A correction has been applied to Nitrate_plus_Nitrite:Bottle and 
+	Phosphate:Bottle data from deep-water cruises analyzed at IOS between 2009 and 2012. 
+	For details see the report: Corrections_to_Nitrate_and_Phosphate_Data_2009-2012.pdf.
+
+	The minimum detectable level for DMS is 0.10 nM, so “0” values should be
+	interpreted as <0.10. For details on the collection and analysis of the
+	DMS data see file 2009-09_DMS_Report.pdf.  For information on duplicates
+	see file 2009-09_DMS.pdf.
+
+	References:
+	1. Carpenter, J.H. 1965. The Chesapeake Bay Institute Technique for the
+	Winkler Dissolved Oxygen Method. Limmnol. & Oceanogr., 10: 141-143.
+	2. J. Barwell-Clarke and F. Whitney. 1996. Institute of Ocean Sciences
+	Nutrient Methods and Analysis. Canadian Technical Report of Hydrography
+	and Ocean Sciences, No. 182, 43 pp.
+
+    **********************************************************************************
+    Transmissometer #1005DR was calibrated in March 2008, and drifted significantly
+	but steadily until July 2009; then a sudden shift occurred, so that maximum values
+	between September 2009 and July 2010 were very low, ~25%/m. In August 2010 a study
+	was made of transmissivity that led to a decision to apply post-processing
+	corrections to all cruises between March 2008 and June 2010.
+
+    Transmissivity data from this cruise were corrected by multiplying the original
+	values by a correction factor, which was based on assumptions that deep offshore
+	transmissivity from a June 2009 cruise should be about 62%/m and that drift was
+	linear with time between March 2008 and July 2009. The corrections produced
+	reasonable results for all cruises in that time period.
+
+    For details on how the correction factor was derived see:
+	Transmissometer_1005DR_Corrections.pdf
+
+    These data should be considered estimates.
+    ******************************************************************************
+
+    For details on the processing see processing report: 2009-09-proc.pdf
+
+    NOTE: July 2013: A correction has been applied to Nitrate_plus_Nitrite:Bottle and 
+	Phosphate:Bottle data from deep-water cruises analyzed at IOS between 2009 and 2012. 
+	For details see the report: Corrections_to_Nitrate_and_Phosphate_Data_2009-2012.pdf
+
+    $REMARKS
+	Data quality is expressed with the following flags
+	------------------------------------------------------------------------------
+	1 = Sample for this measurement was drawn from water bottle but not analyzed
+	    (not normally used).
+	2 = Acceptable measurement (not normally used).
+	3 = Questionable measurement (no problem observed in sampling or analysis,
+	    but value is not trusted, nonetheless; includes outlyers).
+	4 = Bad measurement (known problem with sampling or analysis, but not
+	    serious enough to completely discard the value).
+	5 = Not reported (lost sample; unredeemably bad measurement).
+	6 = Mean of replicate measurements.
+	7 = Manual chromatographic peak measurement.
+	8 = Irregular digital chromatographic peak integration.
+	9 = Sample not drawn for this measurement from this bottle (not normally
+	    used).
+	------------------------------------------------------------------------------
+    $END
+
+!-1-- 2- --3--- ---4---- ---5---- ---6---- --7-- --8--- --9-- ---10-- ---11--- 12 ---13-- 14 --15- 16 --17-- 18 --19- 20
+!Samp Bo Pressu Temperat Salinity Sigma-t: Trans Oxygen Oxyge Fluores Salinity Fl Oxygen: Fl Nitra Fl Phosph Fl Silic Fl
+!le_  tt re:CTD ure:CTD  :        CTD      missi :Disso n:Dis cence:  :Bottle  ag Dissolv ag te_pl ag ate:   ag ate:  ag
+!Numb ~u                 Practica          vity: lved:  solve CTD:             ~o ed:     ~o ~Nitr ~o Bottle ~o Bottl ~o
+!er   mb                 l:CTD             CTD   CTD:   d:CTD Seapoin          tt Bottle: tt ite:B tt        tt e     tt
+!     er                                         Volume :Mass t                le Volume  le ottle le        le       le
+!---- -- ------ -------- -------- -------- ----- ------ ----- ------- -------- -- ------- -- ----- -- ------ -- ----- --
+*END OF HEADER
+  457 24    5.5   9.5617  32.5521  25.1388  53.8   6.91 301.1   0.621  32.5525      6.982      9.9      1.08     16.2
+  456 23   10.2   9.2795  32.5564  25.1872  53.8   7.00 304.7   0.679  32.5557      7.009      9.9      1.09     16.2
+  455 22   25.3   8.1652  32.5716  25.3690  52.5   7.24 315.3   1.148  32.5713      7.303     10.2      1.10     16.6
+  454 21   50.3   6.2680  32.6035  25.6519  58.2   7.28 316.7   0.661  32.6021      7.311     12.4      1.28     18.8
+  453 20   75.5   5.4474  32.6130  25.7583  60.3   7.26 316.1   0.384  32.6130      7.295     13.9 6    1.38 6   20.6 6
+  452 19  100.9   5.1293  32.6726  25.8418  61.5   7.08 308.0   0.176  32.6745      7.094     15.6 3    1.45 3   22.6 3
+  451 18  125.3   4.8141  33.0131  26.1465  61.9   6.26 272.2   0.131  33.0074      6.323     20.5      1.70     31.4
+  450 17  150.1   4.8226  33.4747  26.5117  62.0   4.99 217.2   0.123  33.5071      4.915     26.9      2.07     45.0
+  449 16  175.2   4.6496  33.7115  26.7185  61.9   3.87 168.2   0.125  33.7102      3.896     31.4 3    2.34 3   56.6 3
+  448 15  200.5   4.4169  33.7552  26.7783  62.1   3.27 142.3   0.125  33.7516      3.314     34.4      2.51     64.6
+  447 14  249.9   4.1411  33.8271  26.8644  62.2   2.29  99.3   0.127  33.8242      2.314 6   38.8      2.79     77.4
+  446 13  301.0   4.0363  33.9011  26.9341  62.1   1.59  69.2   0.129  33.8971      1.635     41.5      2.95     87.3
+  445 12  401.7   3.9987  34.0230  27.0349  62.4   1.07  46.6   0.129  34.0248      1.105     43.3      3.08    100.7
+  444 11  599.8   3.6431  34.1890  27.2027  62.5   0.53  23.2   0.129  34.1888      0.553     45.2      3.21    122.7
+  443 10  800.7   3.2449  34.2978  27.3277  62.5   0.41  17.9   0.129  34.2967      0.460     46.0      3.26    138.9
+  442  9 1001.6   2.9253  34.3768  27.4201  62.5   0.33  14.5   0.127  34.3759      0.346     46.8      3.31    151.7
+  441  8 1249.8   2.5758  34.4530  27.5118  62.6   0.34  14.7   0.127  34.4521      0.367     46.9      3.30    164.2
+  440  7 1498.9   2.3239  34.5050  27.5746  62.6   0.54  23.5   0.125  34.5039      0.564     46.4      3.26    171.9
+  439  6 2000.4   1.9479  34.5830  27.6674  62.6   1.26  54.9   0.121  34.5820      1.275     44.6      3.12    179.8
+  438  5 2500.7   1.7161  34.6287  27.7219  62.6   1.99  86.6   0.118  34.6269      2.015     42.5      2.98    180.8
+  437  4 3001.2   1.5790  34.6560  27.7540  62.7   2.60 113.1   0.116  34.6588      2.579     40.7      2.85    177.7
+  436  3 3501.3   1.5119  34.6724  27.7721  62.7   3.04 131.9   0.115  34.6730      2.975     39.5      2.75    177.3
+  435  2 4000.6   1.5055  34.6803  27.7789  62.6   3.29 142.7   0.116  34.6840 6    3.285     38.8 3    2.71 3  175.8 3
+  434  1 4320.2   1.5143  34.6838  27.7811  61.6   3.40 147.5   0.117  34.6853      3.511     38.5      2.69    179.3
